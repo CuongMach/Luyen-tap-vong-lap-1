@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 1</title>
+</head>
+<body>
+<!--Bài 1-->
+<!--<script>-->
+<!--    for (i=1; i<100 ; i++){-->
+<!--    console.log(i)-->
+<!--    }-->
+<!--    console.log("Hoàn thành")-->
+<!--</script>-->
+
+<!--Bài 2-->
+<!--<script>-->
+<!--    let i = prompt("Nhập nhiệt độ")-->
+<!--    if (i>100){-->
+<!--        alert("Người dùng cần giảm nhiệt độ")-->
+<!--    }else if(i<20){-->
+<!--        alert("Người dùng cần tăng nhiệt độ")-->
+<!--    }else{-->
+<!--        alert("Nhiệt độ bình thường")-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 3-->
+<!--<script>-->
+<!--    const number = parseInt(prompt('Enter the number of terms: '));-->
+<!--    let n1 = 0, n2 = 1, nextTerm;-->
+
+<!--    console.log('Fibonacci Series:');-->
+
+<!--    for (let i = 1; i <= number; i++) {-->
+<!--        console.log(n1);-->
+<!--        nextTerm = n1 + n2;-->
+<!--        n1 = n2;-->
+<!--        n2 = nextTerm;-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 7-->
+<!--<script>-->
+<!--    for(let i = 1; i<=100; i++) {-->
+<!--        if (i % 3 == 0) {-->
+<!--            if (i % 5 == 0) {-->
+<!--                document.write("FizzBuzz; ")-->
+<!--            } else {-->
+<!--                document.write("Fizz; ")-->
+<!--            }-->
+<!--        }-->
+<!--        else if (i % 5 == 0) {-->
+<!--                document.write("Buzz; ")-->
+<!--            } else {-->
+<!--                document.write(i + "; ")-->
+<!--            }-->
+<!--        }-->
+<!--</script>-->
+
+<!--Bài 8-->
+<div><h3>Game đoán số</h3></div>
+<button onclick="startplay()">Start play</button>
+<button onclick="playagain()">Play again</button>
+<button onclick="xemketqua()">Đoán</button>
+<script>
+    let num;
+
+    function startplay() {
+        let a = parseInt(prompt("Hãy nhập số đầu tiên"))
+        let b = parseInt(prompt("Hãy nhập số cuối cùng"))
+
+        let d = b - a + 1
+        let abc = Math.floor(Math.random() * d) + a;
+        num = abc
+    }
+
+    function xemketqua() {
+        let c = parseInt(prompt("Hãy nhập số muốn đoán"))
+        for (i = 0; i < 3; i++) {
+            if (c === num) {
+                alert("Chúc mừng thí chủ đoán đúng")
+            } else if (c > num) {
+                alert("Bạn đã đoán sai mời chọn số bé hơn");
+                parseInt(prompt("Chọn lại"))
+            } else {
+                alert("Bạn đã chọn sai mời chọn số lớn hơn");
+                parseInt(prompt("Chọn lại"))
+            }
+        }
+    }
+
+    function playagain() {
+        abc = ""
+    }
+
+
+</script>
+</body>
+</html>
